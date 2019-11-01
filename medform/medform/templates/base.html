@@ -1,0 +1,39 @@
+{% load cms_tags menu_tags sekizai_tags %}
+{% load static %}
+
+<!doctype html>
+<html>
+    <head>
+        <title>{% block title %}This is my new project home page{% endblock title %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="{% page_attribute 'meta_description' %}">
+        <meta name="author" content="Shrinath Khadake">
+
+        <title>{% page_attribute 'page_title' %} - Build By CHALLENGES </title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="{% static "css/modern-business.css" %}" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+        <link href="{% static "font-awesome/css/all.css" %} rel="stylesheet" type="text/css">
+
+        <link href="{% static "froala-design-blocks/css/froala_blocks.min.css" %} rel="stylesheet" type="text/css">
+
+        {% render_block "css" %}
+    </head>
+    <body>
+        {% cms_toolbar %}
+      
+            {% block content %}
+
+            {% endblock content %}
+        </div>
+        {% render_block "js" %}
+    </body>
+</html>

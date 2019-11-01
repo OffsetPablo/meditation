@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags sekizai_tags %}
+
+{% load static %}
+
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+
+{% static_placeholder "NAV-BAR" %}
+
+{% placeholder "CTA" %}
+
+	 {% placeholder "guide"%}
+
+
+
+{% placeholder "challenges" %}
+
+
+
+	{% placeholder content or %}
+
+
+
+
+
+
+
+
+{% endplaceholder %}
+<footer class="fdb-block footer-large ">
+		{% static_placeholder "Footer" %}
+		</footer>
+
+{% endblock content %}
+
+<footer class="fdb-block footer-large ">
+		{% static_placeholder "Footer" %}
+		</footer>
